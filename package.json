@@ -19,6 +19,9 @@
   ],
   "author": "ewmmbrand",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/emmbrand/gatsby-analytics.git"
