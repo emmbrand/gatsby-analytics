@@ -9,8 +9,8 @@ type CookiesBannerChildrenProps = {
 }
 
 interface ICookiesBanner {
-    children: ( { acceptAllCookies, declineAllCookies, dismissBanner }: CookiesBannerChildrenProps ) => ReactElement
-    dismissedChildren?: ( { acceptAllCookies, declineAllCookies }: Omit<CookiesBannerChildrenProps, "dismissBanner"> ) => ReactElement
+    children: ( { acceptAllCookies, declineAllCookies, dismissBanner }: CookiesBannerChildrenProps ) => ReactElement<any, any> | null
+    dismissedChildren: ( { acceptAllCookies, declineAllCookies }: Omit<CookiesBannerChildrenProps, "dismissBanner"> ) => ReactElement<any, any> | null
 }
 
 const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren } ) => {
@@ -22,7 +22,7 @@ const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren } ) =>
     }, [] )
 
     function acceptAllCookies() {
-        Cookies.set( 'cookiesConsent', true, { expires: 30 } );
+        Cookies.set( 'cookiesConsent', "true", { expires: 30 } );
         setCookies( {
             cookiesConsent: "true",
             closeBanner   : true
@@ -30,7 +30,7 @@ const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren } ) =>
     }
 
     function declineAllCookies() {
-        Cookies.set( 'cookiesConsent', false, { expires: 30 } );
+        Cookies.set( 'cookiesConsent', "false", { expires: 30 } );
         sessionStorage.setItem( "closeCookieBanner", "true" )
         setCookies( {
             cookiesConsent: "false",
@@ -51,7 +51,7 @@ const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren } ) =>
     }
 
     if (cookiesConsent === "true" || closeBanner) {
-        return dismissedChildren( { acceptAllCookies, declineAllCookies } ) ?? null
+        return dismissedChildren && dismissedChildren( { acceptAllCookies, declineAllCookies } )
     }
 
     return (

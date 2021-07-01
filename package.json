@@ -2,7 +2,12 @@
   "name": "@emmbrand/gatsby-analytics",
   "version": "0.0.1",
   "description": "Gatsby plugin for Analytics",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -20,17 +25,29 @@
     "url": "git+https://github.com/emmbrand/gatsby-analytics.git"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@types/facebook-pixel": "^0.0.23",
     "@types/grecaptcha": "^3.0.2",
     "@types/gtag.js": "^0.0.6",
+    "@types/js-cookie": "^2.2.6",
     "@types/node": "^15.12.5",
     "@types/react": "^17.0.13",
-    "@types/react-dom": "^17.0.8"
+    "@types/react-dom": "^17.0.8",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0"
   },
   "peerDependencies": {
     "gatsby": "^3",
     "js-cookie": "^2",
     "react": "^17 || ^16.8",
-    "react-dom": "^17 || ^16.8"
+    "react-dom": "^17 || ^16.8",
+    "tslib": "^2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist/*"
   }
 }
