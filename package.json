@@ -1,0 +1,37 @@
+{
+  "name": "@emmbrand/gatsby-analytics",
+  "version": "0.0.1",
+  "description": "Gatsby plugin for Analytics",
+  "main": "index.js",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-analytics",
+    "analytics",
+    "facebook-pixel",
+    "google",
+    "recaptcha",
+    "facebook-pixel"
+  ],
+  "files": [
+    "gatsby-node.js",
+    "README.md"
+  ],
+  "author": "ewmmbrand",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "@types/facebook-pixel": "^0.0.23",
+    "@types/grecaptcha": "^3.0.2",
+    "@types/gtag.js": "^0.0.6",
+    "@types/node": "^15.12.5"
+  },
+  "peerDependencies": {
+    "js-cookie": "^2.2.1",
+    "react": "^17.0.2 || ^16.8",
+    "react-dom": "^17.0.2 || ^16.8"
+  }
+}
