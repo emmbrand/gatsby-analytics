@@ -1,13 +1,10 @@
 {
   "name": "@emmbrand/gatsby-analytics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gatsby plugin for Analytics",
   "main": "index.js",
   "module": "index.esm.js",
   "types": "index.d.js",
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "gatsby",
     "gatsby-plugin",
