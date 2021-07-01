@@ -1,5 +1,4 @@
-import * as React from "react"
-import { Dispatch, FunctionComponent, memo, SetStateAction, useContext, useEffect, useState } from "react";
+import React, { Dispatch, FunctionComponent, memo, SetStateAction, useContext, useEffect, useState } from "react"
 import Cookies from 'js-cookie';
 
 export type TypeCookies = {

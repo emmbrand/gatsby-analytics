@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect, useState } from "react";
+import React, { FC, ReactElement, useEffect, useState } from "react";
 import Cookies from 'js-cookie';
 import { useCookieContext } from "./CookiesContext";
 
@@ -9,8 +9,8 @@ type CookiesBannerChildrenProps = {
 }
 
 interface ICookiesBanner {
-    children: ( { acceptAllCookies, declineAllCookies, dismissBanner }: CookiesBannerChildrenProps ) => ReactNode
-    dismissedChildren?: ( { acceptAllCookies, declineAllCookies }: Omit<CookiesBannerChildrenProps, "dismissBanner"> ) => ReactNode
+    children: ( { acceptAllCookies, declineAllCookies, dismissBanner }: CookiesBannerChildrenProps ) => ReactElement
+    dismissedChildren?: ( { acceptAllCookies, declineAllCookies }: Omit<CookiesBannerChildrenProps, "dismissBanner"> ) => ReactElement
 }
 
 const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren } ) => {
