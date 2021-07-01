@@ -2,9 +2,9 @@
   "name": "@emmbrand/gatsby-analytics",
   "version": "0.0.1",
   "description": "Gatsby plugin for Analytics",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.js",
+  "main": "index.js",
+  "module": "index.esm.js",
+  "types": "index.d.js",
   "files": [
     "dist"
   ],

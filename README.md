@@ -1,4 +1,4 @@
-# gatsby-source-firestore
+# @emmbrand/gatsby-analytics
 
 Gatsby plugin to add Analytics to your site.
 

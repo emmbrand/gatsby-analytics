@@ -1,10 +1,6 @@
 /.src/
 /.idea
 /node_modules
-gatsby-browser.js
-gatsby-ssr.js
-index.ts
-README.md
 rollup.config.js
 tsconfig.json
 
