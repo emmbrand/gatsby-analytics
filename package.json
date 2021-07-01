@@ -1,6 +1,6 @@
 {
-  "name": "@emmbrand/gatsby-analytics-with-consent",
-  "version": "1.0.3",
+  "name": "@emmbrand/gatsby-plugin-analytics",
+  "version": "1.0.0",
   "description": "Gatsby plugin for Analytics and cookie consent.",
   "main": "index.js",
   "module": "index.esm.js",
@@ -13,7 +13,9 @@
     "facebook-pixel",
     "google",
     "recaptcha",
-    "facebook-pixel"
+    "facebook-pixel",
+    "cookie",
+    "consent"
   ],
   "author": "ewmmbrand",
   "license": "MIT",
