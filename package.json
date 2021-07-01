@@ -1,6 +1,6 @@
 {
   "name": "@emmbrand/gatsby-analytics",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Gatsby plugin for Analytics",
   "main": "index.js",
   "keywords": [
