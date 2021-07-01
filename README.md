@@ -23,9 +23,23 @@ module.exports = {
 }
 ```
 
+Wrap your gatsby app with CookiesContextProvider
+
+```jsx
+//gatsby-browser.js
+export const wrapRootElement = ({element}) => {
+    return (
+        <CookiesContextProvider>
+            {element}
+        </CookiesContextProvider>
+    )
+};
+```
+
 Then use CookiesBanner Component to manage your cookies.
 
 ```jsx
+//gatsby-browser.js
 export const wrapPageElement = ({element, props}) => {
     return (
         <>
@@ -44,4 +58,3 @@ export const wrapPageElement = ({element, props}) => {
     )
 }
 ```
-

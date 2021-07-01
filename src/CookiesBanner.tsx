@@ -10,10 +10,10 @@ type CookiesBannerChildrenProps = {
 
 interface ICookiesBanner {
     children: ( { acceptAllCookies, declineAllCookies, dismissBanner }: CookiesBannerChildrenProps ) => ReactElement<any, any> | null
-    dismissedChildren: ( { acceptAllCookies, declineAllCookies }: Omit<CookiesBannerChildrenProps, "dismissBanner"> ) => ReactElement<any, any> | null
+    dismissedChildren?: ( { acceptAllCookies, declineAllCookies }: Omit<CookiesBannerChildrenProps, "dismissBanner"> ) => ReactElement<any, any> | null
 }
 
-const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren } ) => {
+const CookiesBanner: FC<ICookiesBanner> = ( { children, dismissedChildren = null } ) => {
     const [ mounted, setMounted ] = useState( false );
     const { cookiesConsent, closeBanner, setCookies } = useCookieContext()
 

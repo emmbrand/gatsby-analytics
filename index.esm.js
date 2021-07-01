@@ -34,9 +34,9 @@ function useCookieContext() {
 }
 
 var CookiesBanner = function (_a) {
-    var children = _a.children, dismissedChildren = _a.dismissedChildren;
-    var _b = useState(false), mounted = _b[0], setMounted = _b[1];
-    var _c = useCookieContext(), cookiesConsent = _c.cookiesConsent, closeBanner = _c.closeBanner, setCookies = _c.setCookies;
+    var children = _a.children, _b = _a.dismissedChildren, dismissedChildren = _b === void 0 ? null : _b;
+    var _c = useState(false), mounted = _c[0], setMounted = _c[1];
+    var _d = useCookieContext(), cookiesConsent = _d.cookiesConsent, closeBanner = _d.closeBanner, setCookies = _d.setCookies;
     useEffect(function () {
         setMounted(true);
     }, []);
@@ -105,5 +105,5 @@ function sendFacebookPixelEvent(_a) {
     fbq("track", eventName, options);
 }
 
-export { CookiesBanner as CookieBanner, CookiesContextProvider, sendFacebookPixelEvent, sendGoogleAnalyticsView, useCookieContext };
+export { CookiesBanner, CookiesContextProvider, sendFacebookPixelEvent, sendGoogleAnalyticsView, useCookieContext };
 //# sourceMappingURL=index.esm.js.map
