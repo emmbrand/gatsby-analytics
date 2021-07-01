@@ -1,5 +1,5 @@
 {
-  "name": "@emmbrand/gatsby-plugin-analytics",
+  "name": "@emmbrand/gatsby-plugin-analytics-with-concent",
   "version": "1.0.0",
   "description": "Gatsby plugin for Analytics and cookie consent.",
   "main": "index.js",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emmbrand/gatsby-analytics.git"
+    "url": "git+https://github.com/emmbrand/gatsby-plugin-analytics.git"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
