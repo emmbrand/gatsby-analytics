@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git://github.com/emmbrand/gatsby-analytics.git"
   },
   "devDependencies": {
     "@types/facebook-pixel": "^0.0.23",
