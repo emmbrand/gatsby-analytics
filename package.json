@@ -1,7 +1,7 @@
 {
-  "name": "@emmbrand/gatsby-analytics",
-  "version": "0.0.2",
-  "description": "Gatsby plugin for Analytics",
+  "name": "@emmbrand-gatsby/analytics-with-consent",
+  "version": "0.0.1",
+  "description": "Gatsby plugin for Analytics and cookie consent.",
   "main": "index.js",
   "module": "index.esm.js",
   "types": "index.d.js",
